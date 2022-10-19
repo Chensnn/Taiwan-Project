@@ -1,0 +1,210 @@
+/* google font setting */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #403f3d;
+}
+header {
+  background-color: #d9d9d9;
+  width: 100%;
+  padding: 1rem;
+}
+h1,
+h5 {
+  text-align: center;
+  font-weight: normal;
+}
+.headerTitle {
+  font-size: 2.3rem;
+}
+.headerText {
+  margin-left: 1.6rem;
+}
+
+/* 因為對nav來說child element只有ul一個，所以對它做display:flex是無效的 */
+nav {
+  background: linear-gradient(90deg, rgb(176, 224, 73), rgb(169, 199, 229));
+}
+/* 用ul來當flex container裡面li就是flex items */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  padding: 0.5rem 0.75rem;
+  transition: all 0.5s ease;
+}
+nav ul li:hover {
+  background-color: antiquewhite;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.15rem;
+}
+/* section  */
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+section.left,
+section.right {
+  padding: 2rem;
+}
+section.left {
+  flex: 4 1 550px;
+}
+
+section.right h4 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+section.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fef5f5;
+  flex: 1 1 250px;
+}
+section.right p {
+  margin: 1rem 0rem;
+}
+#curve_chart {
+  margin: 1rem auto;
+  width: 100%;
+  height: 80%;
+}
+
+/* 當下頁面顯示 */
+.active {
+  background-color: antiquewhite;
+  font-weight: 500;
+}
+@media screen and (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #curve_chart {
+    margin: auto;
+    width: 100%;
+    height: 30%;
+  }
+}
+
+/* 以上是index.html的css */
+section.container {
+  width: 100%;
+  margin: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+.container div {
+  margin-bottom: 2rem;
+  background-color: rgb(246, 246, 239);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.container ol li {
+  list-style-type: decimal;
+  margin-left: 1rem;
+}
+.firstText p:nth-child(2n) {
+  margin: 1rem;
+  font-weight: 500;
+}
+.container hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* 以上是agriculture.html的css */
+
+section.industralizationContainer,
+section.secondContainer,
+section.thirdContainer {
+  margin: 1.5rem 3rem;
+}
+section.industralizationContainer hr {
+  margin: 1.25rem 0rem;
+}
+section.industralizationContainer p {
+  line-height: 1.75rem;
+  text-align: justify;
+}
+
+section.secondContainer {
+  display: flex;
+  padding: 4rem;
+  background-color: rgb(246, 246, 239);
+  border-radius: 1.5rem;
+}
+section.secondContainer p {
+  margin: auto 3rem auto 3rem;
+  line-height: 1.75rem;
+  text-align: justify;
+}
+section.thirdContainer p {
+  margin-bottom: 1.75rem;
+  line-height: 1.75rem;
+  text-align: justify;
+}
+
+section img {
+  max-width: 30vw;
+}
+@media screen and (max-width: 850px) {
+  section.secondContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1.45rem 0rem;
+  }
+  section img {
+    margin-bottom: 1rem;
+    min-width: 100%;
+  }
+}
+/* 以上是industralization.html的css */
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.authorContainer {
+  margin: 5rem auto;
+  min-width: 250px;
+  min-height: 250px;
+}
+.authorContainer img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+section.authorInfo h3,
+section.authorInfo a {
+  letter-spacing: 0.25rem;
+}
+section.authorInfo a {
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 700;
+}
+section.authorInfo {
+  margin-bottom: 3rem;
+}
+/* 以上是author.html的css */
